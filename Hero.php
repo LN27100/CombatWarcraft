@@ -1,13 +1,15 @@
 <!-- Exercice 4
 Dans un nouveau fichier Hero.php, créer la classe Hero héritant de Character et ayant pour
-attributs weapon, weaponDamage, shield et shieldValue.
-L'attribut weapon permettra de définir le nom de l'arme équipée,
-weaponDamage indiquera les dégâts basiques de l'arme,
-shield définira le nom de l'armure équipée,
+attributs name, weaponName, weaponDamage,shieldName et shieldValue.
+L'attribut name permettra de définir le nom du héro.
+L'attribut weaponName permettra de définir le nom de l'arme équipée.
+weaponDamage indiquera les dégâts basiques de l'arme.
+shieldName définira le nom de l'armure équipée.
 shieldValue indiquera le nombre de dégâts que l'armure encaisse à la place du héros.
-Les attributs ne doivent être accessibles que dans cette classe !  -->
 
-<!-- Exercice 5
+Les attributs ne doivent être accessibles que dans cette classe !
+
+ Exercice 5
 Créer les méthodes permettant d’accéder aux attributs de la classe Hero et permettant également
 de les définir.
 
@@ -25,9 +27,90 @@ nouvellement créé.  -->
 
 require_once 'Character.php'; //récupérer la classe Charater dans la page character.php
 
-class Hero extends Character { // permets d'hériter de la classe
-private $weapon;
-private $weaponDamage;
-private $shield;
-private $shieldValue;
+
+class Hero extends Character
+{ //permet d'hériter de la classe (exo4)
+    private $name;
+    private $weaponName;
+    private $weaponDamage;
+    private $shieldName;
+    private $shieldValue;
+
+    //    Getter et Setter (exo5)
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getWeaponName()
+    {
+        return $this->weaponName;
+    }
+
+    public function setWeaponName($weaponName)
+    {
+        $this->weaponName = $weaponName;
+    }
+
+    public function getWeaponDamage()
+    {
+        return $this->weaponDamage;
+    }
+
+    public function setWeaponDamage($weaponDamage)
+    {
+        $this->weaponDamage = $weaponDamage;
+    }
+
+    public function getShieldName()
+    {
+        return $this->shieldName;
+    }
+
+    public function setShieldName($shieldName)
+    {
+        $this->shieldName = $shieldName;
+    }
+
+    public function getShieldValue()
+    {
+        return $this->shieldValue;
+    }
+
+    public function setShieldValue($shieldValue)
+    {
+        $this->shieldValue = $shieldValue;
+    }
+
+    //  Mise en place du constructeur (exo6)
+    function __construct(int $health, int $rage, string $name, string $weaponName, int $weaponDamage, string $shieldName, int $shieldValue)
+    {
+
+        parent ::__construct($health, $rage); //on appelle le constructeur de la classe parrente Character
+
+        $this->setName($name) ;
+        $this->setWeaponName($weaponName) ;
+        $this->setWeaponDamage($weaponDamage) ;
+        $this->setShieldName($shieldName) ;
+        $this->setShieldValue($shieldValue) ;
+    }
+
+    // Méthode pour afficher les infos du héros
+
+    public function getInfos()
+    {
+    echo 'Nom: '.$this->getName() . '<br>';
+    echo 'Arme: '.$this->getWeaponName() . '<br>';
+    echo 'Dégâts de l\'arme: '.$this->getWeaponDamage() . '<br>';
+    echo 'Nom de l\'armure: '.$this->getShieldName() . '<br>';
+    echo 'Valeur du bouclier: '.$this->getShieldValue() . '<br>';
+
+    }
 }
+?>
