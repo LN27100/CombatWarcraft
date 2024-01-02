@@ -43,7 +43,7 @@ class Hero extends Character
         return $this->name;
     }
 
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
     }
@@ -53,7 +53,7 @@ class Hero extends Character
         return $this->weaponName;
     }
 
-    public function setWeaponName($weaponName)
+    public function setWeaponName(string $weaponName)
     {
         $this->weaponName = $weaponName;
     }
@@ -63,7 +63,7 @@ class Hero extends Character
         return $this->weaponDamage;
     }
 
-    public function setWeaponDamage($weaponDamage)
+    public function setWeaponDamage(int $weaponDamage)
     {
         $this->weaponDamage = $weaponDamage;
     }
@@ -73,7 +73,7 @@ class Hero extends Character
         return $this->shieldName;
     }
 
-    public function setShieldName($shieldName)
+    public function setShieldName(string $shieldName)
     {
         $this->shieldName = $shieldName;
     }
@@ -83,7 +83,7 @@ class Hero extends Character
         return $this->shieldValue;
     }
 
-    public function setShieldValue($shieldValue)
+    public function setShieldValue(int $shieldValue)
     {
         $this->shieldValue = $shieldValue;
     }
@@ -92,25 +92,26 @@ class Hero extends Character
     function __construct(int $health, int $rage, string $name, string $weaponName, int $weaponDamage, string $shieldName, int $shieldValue)
     {
 
-        parent ::__construct($health, $rage); //on appelle le constructeur de la classe parrente Character
+        parent::__construct($health, $rage); //on appelle le constructeur de la classe parrente Character
 
-        $this->setName($name) ;
-        $this->setWeaponName($weaponName) ;
-        $this->setWeaponDamage($weaponDamage) ;
-        $this->setShieldName($shieldName) ;
-        $this->setShieldValue($shieldValue) ;
+        $this->setName($name);
+        $this->setWeaponName($weaponName);
+        $this->setWeaponDamage($weaponDamage);
+        $this->setShieldName($shieldName);
+        $this->setShieldValue($shieldValue);
     }
 
     // Méthode pour afficher les infos du héros
 
     public function getInfos()
     {
-    echo 'Nom: '.$this->getName() . '<br>';
-    echo 'Arme: '.$this->getWeaponName() . '<br>';
-    echo 'Dégâts de l\'arme: '.$this->getWeaponDamage() . '<br>';
-    echo 'Nom de l\'armure: '.$this->getShieldName() . '<br>';
-    echo 'Valeur du bouclier: '.$this->getShieldValue() . '<br>';
-
+        echo 'Point de vie: ' . $this->getHealth() . '<br>';
+        echo 'Point de rage: ' . $this->getRage() . '<br>';
+        echo 'Nom: ' . $this->getName() . '<br>';
+        echo 'Arme: ' . $this->getWeaponName() . '<br>';
+        echo 'Dégâts de l\'arme: ' . $this->getWeaponDamage() . '<br>';
+        echo 'Nom de l\'armure: ' . $this->getShieldName() . '<br>';
+        echo 'Valeur du bouclier: ' . $this->getShieldValue() . '<br>';
     }
 }
 ?>
