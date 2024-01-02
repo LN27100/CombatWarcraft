@@ -1,6 +1,6 @@
 <?php
-require_once 'Hero.php';
-$hero = new Hero (5000, 0, 'Link', 'Master Sword', 100, 'Bouclier Hylien', 50);
+require_once 'Hero.php'; //récupérer une fois la page héros
+$hero = new Hero (5000, 0, 'Link', 'Master Sword', 100, 'Bouclier Hylien', 50); // créer un nouveau héros
 ?>
 
 <!DOCTYPE html>
