@@ -12,8 +12,9 @@ $hero = new Hero (5000, 0, 'Link', 'Master Sword', 100, 'Bouclier Hylien', 50); 
 </head>
 <body>
     
-<p>Héros</p>
+<h1>Héros</h1>
 
+<!-- utiliser la méthode pour afficher les données du héros -->
 <?php
 $hero ->getInfos();
 
