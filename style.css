@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Diphylleia&display=swap');
+/* font-family: 'Bungee Spice', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+/* font-family: 'Nova Square', sans-serif; */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Tektur', sans-serif;
     background-color: #d6d4d4;
-    
+    text-align: center;
+    font-family: 'Nova Square', sans-serif;
 }
 
 h1 {
-    color: #1244db;
+    font-family: 'Bungee Spice', sans-serif;
 }
 
 .card-container {
@@ -20,9 +26,10 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     padding: 20px;
-    margin: 10px;
+    margin: 5px;
     background-color: #7c38bd;
     color: white;
+    text-align: justify;
 }
 
 .cardMechant {
@@ -31,14 +38,18 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     padding: 20px;
-    margin: 10px;
+    margin: 5px;
     background-color: aqua;
+    text-align: justify;
+
 }
 
 .card-title {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
+    text-decoration: underline;
+    font-weight: lighter;
 }
 
 .card-content {
@@ -53,14 +64,14 @@ h1 {
 }
 
 .damage-info {
-    background-color: #0f5527;
+    background-color: #9871bb;
     color: white;
     width: 30rem;
     height: 2rem;
 }
 
 .hero-attack {
-    background-color:#7c38bd;
+    background-color: #7c38bd;
     color: white;
     width: 40rem;
     text-align: right;
@@ -68,24 +79,55 @@ h1 {
 }
 
 .damage-infos {
-    background-color: orange;
+    background-color: aquamarine;
     width: 30rem;
     height: 2rem;
 }
 
 .defeat {
-background-color: darkred;
-color: white;
-font-weight: bold;
-text-align: center;
-border-radius: 10px;
-width: 20rem;
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    width: 20rem;
 }
 
 .victory {
-background-color: palegreen;
-border-radius: 10px;
-width: 20rem;
-font-weight: bold;
-text-align: center;
+    background-color: palegreen;
+    border-radius: 10px;
+    width: 20rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card {
+    border: 3px solid #b0adad;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.hero-card {
+    background-color: #b294bb;
+}
+
+.malefic-card {
+    background-color: #9fd0d1;
+}
+
+
+.orc-attack,
+.damage-info,
+.hero-attack,
+.damage-infos,
+.defeat,
+.victory,
+.card,
+.hero-card,
+.malefic-card {
+    width: 30rem;
+    margin-bottom: 0.5rem;
+    margin: 0 auto;
+
 }
