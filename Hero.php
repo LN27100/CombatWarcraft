@@ -19,7 +19,12 @@ Cette méthode devra permettre le déclenchement de la méthode construct de la 
 (Character) et devra également permettre de défnir les valeurs de name, weaponName, weaponDamage,
 shieldName et shieldValue.
 Pour finir, cette méthode doit retourner une phrase contenant toutes les informations sur le Héros
-nouvellement créé.  -->
+nouvellement créé. 
+
+Exercice 7
+Créer une méthode beAttacked dans la classe Hero permettant au Héros de prendre des dégâts (Perdre de la vie) en considérant la valeur de l’armure. 
+
+-->
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -101,6 +106,19 @@ class Hero extends Character
         $this->setShieldValue($shieldValue);
     }
 
+
+    // Méthode pour être attaquer
+    
+    public function beAttacked($damage)
+    {
+        //les dégâts réels sont les dégâts totaux moins la valeur du bouclier.
+        $actualDamage = $damage - $this->getShieldValue();
+
+        //soustrait les dégâts  la santé
+        $this->setHealth($this->getHealth() - $actualDamage);
+    }
+
+
     // Méthode pour afficher les infos du héros
 
     public function getInfos()
@@ -113,5 +131,6 @@ class Hero extends Character
         echo 'Nom de l\'armure: ' . $this->getShieldName() . '<br>';
         echo 'Valeur du bouclier: ' . $this->getShieldValue() . '<br>';
     }
+
 }
 ?>
