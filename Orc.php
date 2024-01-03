@@ -44,10 +44,7 @@ class Orc extends Character {
     {
         $this->damage = $damage;
     }
-    public function beAttacked($damage)
-    {
-        $this->setHealth($this->getHealth() - $damage);
-    }
+    
 
     //  Mise en place du constructeur
     function __construct(int $health, int $rage, string $type)
@@ -76,6 +73,7 @@ class Orc extends Character {
     {
         $this->setDamage(rand(600,800));        
     }
+
 }
 
 ?>
