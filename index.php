@@ -1,9 +1,10 @@
 <?php
 require_once 'Hero.php'; //récupérer une fois la page héros
 require_once 'Orc.php'; 
+require_once 'Character.php'; 
 
-$hero = new Hero (5000, 0, 'Link', 'Master Sword', 100, 'Bouclier Hylien', 50); // créer un nouveau héros
-$malefic = new Orc (5000, 0, 'Orc', 300); // créer un nouveau méchant
+$hero = new Hero (1000, 0, 'Link', 'Master Sword', 250, 'Bouclier Hylien', 450); // créer un nouveau héros
+$malefic = new Orc (2000, 0, 'Feu'); // créer un nouveau méchant
 
 ?>
 
@@ -26,10 +27,21 @@ $hero ->getInfos();
 // echo $hero->getName(); Le getter permet d'afficher les attributs privés
 ?>
 
-<h2>Méchant</h2>
+<!-- utiliser la méthode pour afficher les données de l'Orc -->
+
+<h2>Orc</h2>
 
 <?php
 $malefic ->getInfos();
 ?>
+
+<h3>COMBAT</h3>
+
+<?php
+function combat () {
+
+}
+?>
+
 </body>
 </html>

@@ -46,31 +46,31 @@ class Orc extends Character {
     }
 
     //  Mise en place du constructeur
-    function __construct(int $health, int $rage, string $type, int $damage)
+    function __construct(int $health, int $rage, string $type)
     {
 
         parent::__construct($health, $rage); //on appelle le constructeur de la classe parente Character
 
-        $this->setType($type);
-        $this->setDamage($damage);
-       
+        $this->setType($type);       
     }
 
     // Méthode pour afficher les infos de l'Orc
 
     public function getInfos()
     {
+        echo 'Point de vie: ' . $this->getHealth() . '<br>';
+        echo 'Point de rage: ' . $this->getRage() . '<br>';
         echo 'Type: ' . $this->getType() . '<br>';
-        echo 'Dégâts infligés: ' . $this->getDamage() . '<br>';
         
     }
 
     // // Méthode pour  attaquer
-    
-    // public function attacked($damage)
-    // {
-      
-    // }
+
+
+    public function attacked()
+    {
+        $this->setDamage(rand(600,800));        
+    }
 }
 
 ?>
