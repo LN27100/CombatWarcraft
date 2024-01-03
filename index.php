@@ -17,25 +17,27 @@ $malefic = new Orc (2000, 0, 'Feu'); // créer un nouveau méchant
 </head>
 <body>
     
-<h1>Héros</h1>
+<h1>COMBAT</h1>
 
-<!-- utiliser la méthode pour afficher les données du héros -->
 <?php
+
+
+?>
+
+
+<!-- AFFICHAGE DES HEROS -->
+<!-- utiliser la méthode pour afficher les données du héros
+
 $hero ->getInfos();
 
-
-// echo $hero->getName(); Le getter permet d'afficher les attributs privés
-?>
-
-<!-- utiliser la méthode pour afficher les données de l'Orc -->
-
-<h2>Orc</h2>
-
-<?php
+//  utiliser la méthode pour afficher les données de l'Orc
 $malefic ->getInfos();
-?>
 
-<h3>COMBAT</h3>
+
+
+
+
+
 
 <?php
 function combat () {
