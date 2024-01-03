@@ -59,7 +59,6 @@ class Orc extends Character {
 
     public function getInfos()
     {
-        echo 'Un Orc est apparu !!' . '<br>';
         echo 'Point de vie: ' . $this->getHealth() . '<br>';
         echo 'Point de rage: ' . $this->getRage() . '<br>';
         echo 'Type: ' . $this->getType() . '<br>';

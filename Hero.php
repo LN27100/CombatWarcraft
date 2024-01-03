@@ -109,7 +109,7 @@ class Hero extends Character
 
     // Méthode pour être attaquer
     
-    public function beAttacked($damage)
+    public function beAttacked(int $damage)
     {
         //les dégâts réels sont les dégâts totaux moins la valeur du bouclier.
         $actualDamage = $damage - $this->getShieldValue();

@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d6d4d4;
+    
+}
+
+h1 {
+    color: #1244db;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.cardHeros {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #7c38bd;
+    color: white;
+}
+
+.cardMechant {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: aqua;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card-content {
+    font-size: 16px;
+}
+
+
+.orc-attack {
+    background-color: aqua;
+    width: 40rem;
+    text-align: left;
+}
+
+.damage-info {
+    background-color: #0f5527;
+    color: white;
+    width: 30rem;
+    height: 2rem;
+}
+
+.hero-attack {
+    background-color:#7c38bd;
+    color: white;
+    width: 40rem;
+    text-align: right;
+
+}
+
+.damage-infos {
+    background-color: orange;
+    width: 30rem;
+    height: 2rem;
+}
+
+.defeat {
+background-color: darkred;
+color: white;
+font-weight: bold;
+text-align: center;
+border-radius: 10px;
+width: 20rem;
+}
+
+.victory {
+background-color: palegreen;
+border-radius: 10px;
+width: 20rem;
+font-weight: bold;
+text-align: center;
+}
