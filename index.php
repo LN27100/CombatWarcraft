@@ -22,9 +22,9 @@ $malefic = new Orc(2000, 0, 'Feu'); // créer un nouveau méchant
 <body>
 
 
-<div class="card-container">
+    <div class="card-container">
         <div class="cards-wrapper">
-        <h1>COMBATTONS !!</h1>
+            <h1>COMBATTONS !!</h1>
 
             <div class="cardHeros">
                 <h3>Héros</h3>
@@ -45,6 +45,19 @@ $malefic = new Orc(2000, 0, 'Feu'); // créer un nouveau méchant
                     ?>
                 </div>
             </div>
+
+    <!-- Relancer un nouveau combat -->
+            <form method="post" action="">
+                <input type="submit" name="replay" value="Rejouer">
+            </form>
+
+            <?php
+            // Vérifier si le formulaire a été soumis
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['replay'])) {
+                echo '<script>window.location.href = window.location.href;</script>';
+            }
+            ?>
+            
         </div>
 
         <div class="combat-container">
@@ -98,9 +111,12 @@ $malefic = new Orc(2000, 0, 'Feu'); // créer un nouveau méchant
                 }
             }
             ?>
+
+
         </div>
 
     </div>
+
 
 </body>
 

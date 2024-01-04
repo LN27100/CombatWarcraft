@@ -139,3 +139,9 @@ h3 {
     margin: 0 auto;
 
 }
+
+body > div > div.cards-wrapper > form > input[type=submit] {
+    background-color: #DB4E00;
+    border-radius: 5px;
+    color: white;
+}
