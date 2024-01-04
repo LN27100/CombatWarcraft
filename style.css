@@ -61,6 +61,14 @@ h3 {
     margin-bottom: 0.2rem;
 }
 
+body > div > div.cards-wrapper > form > input[type=submit] {
+    background-color: #DB4E00;
+    border-radius: 5px;
+    color: white;
+}
+
+
+/* COMBAT */
 .combat-container {
     margin-top: 1rem; 
 }
@@ -102,7 +110,7 @@ h3 {
 }
 
 .victory {
-    background-color: palegreen;
+    background-color: rgb(34, 238, 34);
     border-radius: 10px;
     width: 20rem;
     font-weight: bold;
@@ -124,7 +132,6 @@ h3 {
     background-color: #9fd0d1;
 }
 
-
 .orc-attack,
 .damage-info,
 .hero-attack,
@@ -140,8 +147,49 @@ h3 {
 
 }
 
-body > div > div.cards-wrapper > form > input[type=submit] {
-    background-color: #DB4E00;
-    border-radius: 5px;
-    color: white;
+
+
+/* REPONSIVE */
+/* écrans moyens */
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* disposition des cartes en colonnes */
+        align-items: center;
+    }
+
+    .cardHeros,
+    .cardMechant {
+        width: 90%;
+        margin: 1rem 0;
+    }
+}
+
+/* petits écrans */
+@media screen and (max-width: 480px) {
+    .cardHeros,
+    .cardMechant {
+        width: 90%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .orc-attack,
+    .damage-info,
+    .hero-attack,
+    .damage-infos,
+    .defeat,
+    .victory,
+    .card,
+    .hero-card,
+    .malefic-card {
+        width: 90%;
+    }
+
+    body > div > div.cards-wrapper > form > input[type=submit] {
+        width: 80%;
+    }
 }
