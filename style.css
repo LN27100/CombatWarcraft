@@ -6,19 +6,24 @@
 body {
     font-family: 'Tektur', sans-serif;
     background-color: #d6d4d4;
-    text-align: center;
     font-family: 'Nova Square', sans-serif;
+    text-align: center;
 }
 
 h1 {
     font-family: 'Bungee Spice', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-container {
     display: flex;
     justify-content: space-around;
-    margin: 40px;
 }
 
 .cardHeros {
@@ -47,14 +52,18 @@ h1 {
 
 }
 
-.card-title {
+h3 {
     font-size: 18px;
-    margin-bottom: 0.5rem;
     text-align: center;
     text-decoration: underline;
     font-weight: lighter;
+    margin-top: 0; 
+    margin-bottom: 0.2rem;
 }
 
+.combat-container {
+    margin-top: 1rem; 
+}
 
 .orc-attack {
     background-color: aqua;
